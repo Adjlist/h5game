@@ -9,6 +9,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         console.log(this.foodType);
+
         var _self = this.node;
         this.node.on('mousedown', function (event) {
             var location = event.getLocation();//获取坐标位置
@@ -26,7 +27,11 @@ cc.Class({
             };
             _self.on('mouseup',up,_self);
         }, this);
-
+    },
+    start: function(){
+        this.bar = DemoBar.instance;
+        this.bar.controller.foodtype = "1";
+        cc.log(this.bar.controller.foodtype);
     },
     update: function (dt) {
 

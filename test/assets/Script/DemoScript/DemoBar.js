@@ -26,14 +26,13 @@ var DemoBar = cc.Class({
     onLoad: function () {
         DemoBar.instance = this;
     },
-
-    getCustomByName: function(name){
+   /* getCustomByName: function(name){
         for(var i = 0;i<this.customs.length;i++){
             if(name==customs[i].name){
                 return customs[i];
             }
         }
-    },
+    },//获取姓名，貌似没有用*/
 
     customIn:function(custom){
         this.customs.push(custom);
